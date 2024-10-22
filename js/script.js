@@ -1,6 +1,6 @@
 //create const RootEl to select the main element div in html that contains all software's app
 const RootEl = document.querySelector("#root");
-const HeroGenerator = (titleText, subtitleText, spanSubtitleText) => {
+const heroGenerator = (titleText, subtitleText, spanSubtitleText) => {
   const Hero = document.createElement("div");
   const title = document.createElement("h1");
   const subtitle = document.createElement("h3");
@@ -15,6 +15,28 @@ const HeroGenerator = (titleText, subtitleText, spanSubtitleText) => {
   return Hero;
 };
 
+const inputGenerator = () => {
+  // The type of InputText is "text" and this value is default
+  const InputEl = document.createElement("div");
+  const InputText = document.createElement("input");
+  const InputBtn = document.createElement("input");
+  InputBtn.type = "submit";
+  InputText.className = "text-style";
+  InputBtn.className = "submit-style";
+  InputEl.append(InputText, InputBtn);
+  return InputEl;
+};
+
+const listGenerator = () => {
+  const ListEl = document.createElement("ul");
+  ListEl.className = "list-style";
+  return ListEl;
+};
+
+const list = listGenerator();
+
 RootEl.append(
-  HeroGenerator("note your tasks", "software developed by ", "MrElliot4")
+  heroGenerator("note your tasks", "software developed by ", "MrElliot4"),
+  inputGenerator(),
+  list
 );
