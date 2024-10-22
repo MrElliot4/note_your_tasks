@@ -1,7 +1,7 @@
-//create const RootEl to select the main element div in html that contains all software's app
-const RootEl = document.querySelector("#root");
+//create const rootEl to select the main element div in html that contains all software's code
+const rootEl = document.querySelector("#root");
 const heroGenerator = (titleText, subtitleText, spanSubtitleText) => {
-  const Hero = document.createElement("div");
+  const hero = document.createElement("div");
   const title = document.createElement("h1");
   const subtitle = document.createElement("h3");
   const span = document.createElement("span");
@@ -11,31 +11,41 @@ const heroGenerator = (titleText, subtitleText, spanSubtitleText) => {
   subtitle.textContent = subtitleText;
   span.textContent = spanSubtitleText;
   subtitle.appendChild(span);
-  Hero.append(title, subtitle);
-  return Hero;
+  hero.append(title, subtitle);
+  return hero;
 };
 
-const inputGenerator = () => {
-  // The type of InputText is "text" and this value is default
-  const InputEl = document.createElement("div");
-  const InputText = document.createElement("input");
-  const InputBtn = document.createElement("input");
-  InputBtn.type = "submit";
-  InputText.className = "text-style";
-  InputBtn.className = "submit-style";
-  InputEl.append(InputText, InputBtn);
-  return InputEl;
+// create the function that generate form
+const formGenerator = () => {
+  // The type of inputText is "text" and this value is default
+  const formEl = document.createElement("form");
+  const inputText = document.createElement("input");
+  const inputBtn = document.createElement("input");
+  inputBtn.type = "submit";
+  formEl.className = "form";
+  inputText.className = "text-style";
+  inputBtn.className = "submit-style";
+  formEl.append(inputText, inputBtn);
+  return formEl;
 };
 
+// create the function that generate the section containing list
 const listGenerator = () => {
-  const ListEl = document.createElement("ul");
-  ListEl.className = "list-style";
-  return ListEl;
+  const listEl = document.createElement("ul");
+  listEl.className = "list-style";
+  return listEl;
+};
+
+//create the function that generate items of list
+const itemGenerator = () => {
+  const itemEl = document.createElement("li");
+  itemEl.className = "itemOfList-style";
+  return itemEl;
 };
 
 const list = listGenerator();
-
-RootEl.append(
+list.append(itemGenerator());
+rootEl.append(
   heroGenerator("note your tasks", "software developed by ", "MrElliot4"),
   inputGenerator(),
   list
