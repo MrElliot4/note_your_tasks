@@ -45,9 +45,18 @@ const itemGenerator = (itemContent) => {
 };
 
 const list = listGenerator();
-list.append(itemGenerator());
+const form = formGenerator();
 rootEl.append(
   heroGenerator("note your tasks", "software developed by ", "MrElliot4"),
-  formGenerator(),
-  list
+  list,
+  form
 );
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const inputText = event.target.elements[0];
+  if (inputText.value.trim() != "") {
+    list.appendChild(itemGenerator(inputText.value));
+    inputText.value = "";
+  }
+});
