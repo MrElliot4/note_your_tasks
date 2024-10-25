@@ -5,6 +5,7 @@ const heroGenerator = (titleText, subtitleText, spanSubtitleText) => {
   const title = document.createElement("h1");
   const subtitle = document.createElement("h3");
   const span = document.createElement("span");
+  hero.className = "hero-style";
   title.className = "title";
   subtitle.className = "subtitle";
   title.textContent = titleText;
@@ -21,10 +22,12 @@ const formGenerator = () => {
   const formEl = document.createElement("form");
   const inputText = document.createElement("input");
   const inputBtn = document.createElement("input");
-  inputBtn.type = "submit";
   formEl.className = "form";
   inputText.className = "text-style";
   inputBtn.className = "submit-style";
+  inputBtn.type = "submit";
+  inputBtn.value = "aggiungi";
+  inputText.placeholder = "aggiungi una task...";
   formEl.append(inputText, inputBtn);
   return formEl;
 };
