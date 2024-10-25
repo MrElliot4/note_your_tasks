@@ -37,9 +37,10 @@ const listGenerator = () => {
 };
 
 //create the function that generate items of list
-const itemGenerator = () => {
+const itemGenerator = (itemContent) => {
   const itemEl = document.createElement("li");
   itemEl.className = "itemOfList-style";
+  itemEl.textContent = itemContent;
   return itemEl;
 };
 
@@ -47,6 +48,6 @@ const list = listGenerator();
 list.append(itemGenerator());
 rootEl.append(
   heroGenerator("note your tasks", "software developed by ", "MrElliot4"),
-  inputGenerator(),
+  formGenerator(),
   list
 );
