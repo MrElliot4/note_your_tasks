@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --body-color: rgb(243, 253, 178);
+  --input-backgroundColor: #00bfff;
+}
+
 body {
-  background-color: rgb(242, 255, 157);
+  background-color: var(--body-color);
   display: flex;
   justify-content: center;
 }
@@ -15,6 +20,10 @@ body {
   font-family: "Playwrite GB S";
   width: 50%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
   border: 3px solid #000;
 }
@@ -24,6 +33,7 @@ body {
 }
 
 .hero-style {
+  width: 100%;
   background-color: #a6f8ff;
   padding-bottom: 15px;
   border-bottom: 2px solid #000;
@@ -31,7 +41,32 @@ body {
 }
 
 .form {
-  position: absolute;
-  bottom: 0;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.form input {
+  width: 200px;
+  font-family: "Playwrite GB S";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--input-backgroundColor);
+  height: 40px;
+  outline: none;
+  box-shadow: 3px 2px 10px -1px;
+  border-radius: 20px;
+}
+
+.form .text-style {
+  text-transform: none;
+  width: 175px;
+  font-size: 2px;
+  font-weight: normal;
+  height: 30px;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #fff;
 }
