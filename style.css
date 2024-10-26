@@ -24,12 +24,12 @@ body {
 }
 
 .subtitle span {
-  color: #ffaa00;
+  color: #fff;
 }
 
 .hero-style {
   width: 100%;
-  background-color: #ff0000;
+  background-color: #8b6914;
   padding-bottom: 15px;
   border-bottom: 2px solid #000;
   text-align: center;
