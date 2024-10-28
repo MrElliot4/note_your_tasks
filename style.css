@@ -64,6 +64,14 @@ body {
   border-radius: 0;
 }
 
+.form .text-style:focus {
+  text-align:initial;
+}
+
+.form .text-style:focus::placeholder {
+  opacity: 0;
+}
+
 .list-style {
   overflow-y: auto;
   width: 100%;
