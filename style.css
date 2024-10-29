@@ -86,6 +86,10 @@ body {
   margin-bottom: 20px;
 }
 
+li {
+  height: 40px;
+}
+
 .delete-btn {
   font-family: sans-serif;
   background-color: #ff0000;
