@@ -69,6 +69,11 @@ body {
   text-align:initial;
 }
 
+
+.form .text-style:focus {
+  font-family: sans-serif;
+}
+
 .form .text-style:focus::placeholder {
   opacity: 0;
 }
