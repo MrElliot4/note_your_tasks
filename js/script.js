@@ -67,3 +67,8 @@ form.addEventListener("submit", (event) => {
     inputText.value = "";
   }
 });
+
+list.addEventListener("click", (event) => {
+  const deleteBtn = event.target;
+  deleteBtn.parentNode.remove();
+});
