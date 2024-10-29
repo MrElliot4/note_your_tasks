@@ -88,6 +88,10 @@ body {
 
 .delete-btn {
   font-family: sans-serif;
+  background-color: #ff0000;
   text-transform: uppercase;
   font-weight: bold;
+  margin-left: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
