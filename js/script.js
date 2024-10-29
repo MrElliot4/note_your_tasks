@@ -42,8 +42,12 @@ const listGenerator = () => {
 //create the function that generate items of list
 const itemGenerator = (itemContent) => {
   const itemEl = document.createElement("li");
+  const deleteBtn = document.createElement("button");
   itemEl.className = "itemOfList-style";
+  deleteBtn.className = "delete-btn";
   itemEl.textContent = itemContent;
+  deleteBtn.textContent = "delete";
+  itemEl.appendChild(deleteBtn);
   return itemEl;
 };
 
