@@ -72,6 +72,6 @@ form.addEventListener("submit", (event) => {
 });
 
 list.addEventListener("click", (event) => {
-  const deleteBtn = event.target;
-  deleteBtn.parentNode.remove();
+  if (event.target.classList.contains("delete-btn"))
+    event.target.parentElement.remove();
 });
