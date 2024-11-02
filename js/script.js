@@ -22,16 +22,13 @@ const formGenerator = () => {
   const formEl = document.createElement("form");
   const inputText = document.createElement("input");
   const inputBtn = document.createElement("input");
-  const binIcon = document.createElement("p");
   formEl.className = "form";
   inputText.className = "text-style";
   inputBtn.className = "submit-style";
-  binIcon.className = "bin-style";
   inputBtn.type = "submit";
   inputBtn.value = "aggiungi";
   inputText.placeholder = "aggiungi una task...";
-  binIcon.textContent = "❌";
-  formEl.append(inputText, inputBtn, binIcon);
+  formEl.append(inputText, inputBtn);
   return formEl;
 };
 

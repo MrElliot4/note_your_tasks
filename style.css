@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 * {
   font-family: "Playwrite GB S", sans-serif;
   margin: 0;
@@ -36,7 +36,6 @@ body {
 }
 
 .form {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +61,7 @@ body {
 }
 
 .form .text-style {
-  font-family: "Playwrite GB S";
+  font-family: 'Playwrite GB S';
   text-transform: none;
   width: 180px;
   text-align: center;
@@ -72,8 +71,9 @@ body {
 }
 
 .form .text-style:focus {
-  text-align: initial;
+  text-align:initial;
 }
+
 
 .form .text-style:focus {
   font-family: sans-serif;
@@ -81,17 +81,6 @@ body {
 
 .form .text-style:focus::placeholder {
   opacity: 0;
-}
-
-.bin-style {
-  position: absolute;
-  right: -40px;
-  top: 42px;
-  cursor: pointer;
-}
-
-.bin-style:active {
-  transform: scale(0.80);
 }
 
 .list-style {
